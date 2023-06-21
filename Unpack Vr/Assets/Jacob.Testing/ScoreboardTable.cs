@@ -8,7 +8,6 @@ public class ScoreboardTable : MonoBehaviour
 {
     private Transform scoreContainer;
     private Transform scoreTemplate;
-    //private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
     private void Awake()
     {
@@ -17,23 +16,18 @@ public class ScoreboardTable : MonoBehaviour
 
         scoreTemplate.gameObject.SetActive(false);
 
-        //AddHighscoreEntry(9000, "BBQ");
-
-        //highscoreEntryList = new List<HighscoreEntry>()
-        //{ new HighscoreEntry{score = 1902, name = "PNS"},
-        //new HighscoreEntry{score = 2344, name = "ABC"},
-        //new HighscoreEntry{score = 5466, name = "DIK"},
-        //new HighscoreEntry{score = 2354, name = "WLY"},
-        //new HighscoreEntry{score = 4235, name = "OOG"},
-        //new HighscoreEntry{score = 2455, name = "BOO"},
-        //new HighscoreEntry{score = 2345, name = "POO"},
-        //new HighscoreEntry{score = 5235, name = "LOO"},
-        //new HighscoreEntry{score = 2555, name = "DOO"},
-        //new HighscoreEntry{score = 1923, name = "GOO"},
-        //};
+        //AddHighscoreEntry(9001, "OOF");
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+
+        if (highscores.highscoreEntryList.Count > 10)
+        {
+            for (int h = highscores.highscoreEntryList.Count; h > 10; h--)
+            {
+                highscores.highscoreEntryList.RemoveAt(10);
+            }
+        }
 
         //Sort
         for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
@@ -82,7 +76,7 @@ public class ScoreboardTable : MonoBehaviour
         scoreTransform.Find("scoreText").GetComponent<TMP_Text>().text = score.ToString();
         string name = highscoreEntry.name;
         scoreTransform.Find("nameText").GetComponent<TMP_Text>().text = name;
-
+        scoreTransform.Find("bg").gameObject.SetActive(rank % 2 == 1);
         transformList.Add(scoreTransform);
 
     }
@@ -98,6 +92,29 @@ public class ScoreboardTable : MonoBehaviour
 
         //Add
         highscores.highscoreEntryList.Add(highscoreEntry);
+
+        //Sort
+        for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+        {
+            for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
+            {
+                if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
+                {
+                    HighscoreEntry temp = highscores.highscoreEntryList[i];
+                    highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                    highscores.highscoreEntryList[j] = temp;
+                }
+            }
+        }
+
+        //Cull
+        if (highscores.highscoreEntryList.Count > 10)
+        {
+            for (int h = highscores.highscoreEntryList.Count; h > 10; h--)
+            {
+                highscores.highscoreEntryList.RemoveAt(10);
+            }
+        }
 
         //Save
         string json = JsonUtility.ToJson(highscores);

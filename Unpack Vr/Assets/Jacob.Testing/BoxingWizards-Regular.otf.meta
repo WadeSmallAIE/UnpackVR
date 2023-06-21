@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7682ad081b216d54dadfb918f6a7f51d
+guid: d478f0c0dc358484eb0b72e665d46af9
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Empty Fridge DEMO
+  - Boxing Wizards
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
