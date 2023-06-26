@@ -14,26 +14,33 @@ public class Timer : MonoBehaviour
     [SerializeField] private bool countDown;
     [SerializeField] private bool hasLimit;
     [SerializeField] private float limit;
+    [Header("Debug")]
+    [SerializeField] private float actualSeconds;
 
     void Start()
     {
-        
+        actualSeconds = seconds + (minutes * 60);
     }
 
     // Update is called once per frame
     void Update()
     {
+        actualSeconds = countDown ? actualSeconds -= Time.deltaTime : actualSeconds += Time.deltaTime;
+
         seconds = countDown ? seconds -= Time.deltaTime : seconds += Time.deltaTime;
 
-        if (seconds >= 60)
-        {
-            minutes++;
-            seconds = 0;       
-        }
+        CalculateActualSeconds();
 
-        if (hasLimit && ((countDown && seconds <= limit) || (!countDown && seconds >= limit))) 
+        //if (seconds >= 59)
+        //{
+        //    minutes++;
+        //    seconds = 0;
+        //    actualSeconds = actualSeconds + 1;
+        //}
+
+        if (hasLimit && ((countDown && actualSeconds <= limit) || (!countDown && actualSeconds >= limit))) 
         {
-            seconds = limit;
+            actualSeconds = limit;
             DisplayTime();
             text.color = Color.red;
             enabled = false;
@@ -44,9 +51,30 @@ public class Timer : MonoBehaviour
 
     private void DisplayTime()
     {
-        
-
         text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        //text.text = time.ToString();
     }
+
+    private void CalculateActualSeconds()
+    {
+        if(!countDown) 
+        {
+            if (seconds >= 59)
+            {
+                minutes++;
+                seconds = 0;
+                actualSeconds = actualSeconds + 1;
+            }
+        }
+        if (countDown)
+        {
+            if (seconds <= 0 && actualSeconds > 0)
+            {
+                minutes--;
+                seconds = 59;
+                actualSeconds = actualSeconds - 1;
+            }
+
+        }
+    }
+
 }
