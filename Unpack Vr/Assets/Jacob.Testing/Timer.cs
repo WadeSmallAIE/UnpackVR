@@ -22,7 +22,6 @@ public class Timer : MonoBehaviour
         actualSeconds = seconds + (minutes * 60);
     }
 
-    // Update is called once per frame
     void Update()
     {
         actualSeconds = countDown ? actualSeconds -= Time.deltaTime : actualSeconds += Time.deltaTime;
@@ -30,13 +29,6 @@ public class Timer : MonoBehaviour
         seconds = countDown ? seconds -= Time.deltaTime : seconds += Time.deltaTime;
 
         CalculateActualSeconds();
-
-        //if (seconds >= 59)
-        //{
-        //    minutes++;
-        //    seconds = 0;
-        //    actualSeconds = actualSeconds + 1;
-        //}
 
         if (hasLimit && ((countDown && actualSeconds <= limit) || (!countDown && actualSeconds >= limit))) 
         {

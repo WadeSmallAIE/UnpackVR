@@ -9,6 +9,18 @@ public class ScoreboardTable : MonoBehaviour
     private Transform scoreContainer;
     private Transform scoreTemplate;
     private List<Transform> highscoreEntryTransformList;
+
+    private class Highscores
+    {
+        public List<HighscoreEntry> highscoreEntryList;
+    }
+
+    [System.Serializable]
+    private class HighscoreEntry
+    {
+        public int score;
+        public string name;
+    }
     private void Awake()
     {
         scoreContainer = transform.Find("highscoreContainer");
@@ -78,10 +90,9 @@ public class ScoreboardTable : MonoBehaviour
         scoreTransform.Find("nameText").GetComponent<TMP_Text>().text = name;
         scoreTransform.Find("bg").gameObject.SetActive(rank % 2 == 1);
         transformList.Add(scoreTransform);
-
     }
 
-    private void AddHighscoreEntry(int score, string name)
+    public void AddHighscoreEntry(int score, string name)
     {
         //Create
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
@@ -120,17 +131,5 @@ public class ScoreboardTable : MonoBehaviour
         string json = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString("highscoreTable", json);
         PlayerPrefs.Save();
-    }
-
-    private class Highscores
-    {
-        public List<HighscoreEntry> highscoreEntryList;
-    }
-
-    [System.Serializable]
-    private class HighscoreEntry
-    {
-        public int score;
-        public string name;
     }
 }
