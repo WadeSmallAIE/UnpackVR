@@ -29,11 +29,14 @@ public class instantiateObjects : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "GameController")
+
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "GameController")
         {
             //CreateObjects();
             Debug.Log("hit");
         }
     }
-
 }
