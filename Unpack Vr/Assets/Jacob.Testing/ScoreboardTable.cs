@@ -28,7 +28,7 @@ public class ScoreboardTable : MonoBehaviour
 
         scoreTemplate.gameObject.SetActive(false);
 
-        //AddHighscoreEntry(9001, "OOF");
+        //AddHighscoreEntry(100, "Test");
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);

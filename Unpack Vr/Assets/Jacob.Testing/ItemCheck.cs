@@ -9,7 +9,6 @@ public class ItemCheck : MonoBehaviour
     private string itemName;
     private int scorePoints;
 
-    //[SerializeField] private ScoreboardTable scoreboard;
     [SerializeField] private ScoreTracker scoreTracker;
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +18,6 @@ public class ItemCheck : MonoBehaviour
 
         if (itemName == checkItemName)
         {
-            //scoreboard.AddHighscoreEntry(9002, "Test2");
             scoreTracker.AddScore(scorePoints);
             Debug.Log("Valid Item. Score:" + scoreTracker.score.ToString());
         }
