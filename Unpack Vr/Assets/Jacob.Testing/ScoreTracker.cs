@@ -5,6 +5,8 @@ using UnityEngine;
 public class ScoreTracker : MonoBehaviour
 {
     public int score;
+    [Header("Debug - Temp Name")]
+    public string userName;
 
     private void OnEnable()
     {

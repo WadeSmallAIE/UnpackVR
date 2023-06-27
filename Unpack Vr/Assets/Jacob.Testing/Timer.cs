@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
+using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
@@ -13,13 +14,20 @@ public class Timer : MonoBehaviour
     [SerializeField] private float minutes;
     [SerializeField] private bool countDown;
     [SerializeField] private bool hasLimit;
+    [Tooltip("In seconds total")]
     [SerializeField] private float limit;
+    [Header("Score")]
+    [SerializeField] private ScoreTracker scoreTracker;
+    [SerializeField] private GameObject scoreBoard;
+    [SerializeField] private ScoreboardTable scoreboardTable;
     [Header("Debug")]
     [SerializeField] private float actualSeconds;
 
-    void Start()
+
+   void Start()
     {
         actualSeconds = seconds + (minutes * 60);
+        scoreBoard.SetActive(false);
     }
 
     void Update()
@@ -36,6 +44,7 @@ public class Timer : MonoBehaviour
             DisplayTime();
             text.color = Color.red;
             enabled = false;
+            GameOver();
         }
 
         DisplayTime();
@@ -67,6 +76,12 @@ public class Timer : MonoBehaviour
             }
 
         }
+    }
+
+    private void GameOver()
+    {
+        scoreboardTable.AddHighscoreEntry(scoreTracker.score, scoreTracker.userName);
+        scoreBoard.SetActive(true);
     }
 
 }
