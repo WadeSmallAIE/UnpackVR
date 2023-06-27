@@ -11,7 +11,7 @@ public class instantiateObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateObjects();
+        //CreateObjects();
     }
 
     // Update is called once per frame
@@ -25,5 +25,13 @@ public class instantiateObjects : MonoBehaviour
     {
         int n = Random.Range(0, instantiateObject.Length);
         GameObject g = Instantiate(instantiateObject[n], pos.position, transform.rotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "GameController")
+        {
+            CreateObjects();
+        }
     }
 }
