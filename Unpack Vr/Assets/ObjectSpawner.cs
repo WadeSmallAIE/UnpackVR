@@ -26,16 +26,4 @@ public class ObjectSpawner : MonoBehaviour
         GameObject p = Instantiate(Spawner[x]);
 
     }
-    /*
-        private void OnTriggerStay(Collider other)
-        {
-            if(other.gameObject.tag == "Player")
-            {
-                ExtraInput button = other.GetComponent<ExtraInput>();
-                if (button.SpawnGo)
-                {
-
-                }
-            }
-        }*/
 }
