@@ -22,12 +22,14 @@ public class Timer : MonoBehaviour
     [SerializeField] private ScoreboardTable scoreboardTable;
     [Header("Debug")]
     [SerializeField] private float actualSeconds;
+    [SerializeField] private bool timeout = false;
 
 
    void Start()
     {
         actualSeconds = seconds + (minutes * 60);
         scoreBoard.SetActive(false);
+        timeout = false;
     }
 
     void Update()
@@ -48,6 +50,7 @@ public class Timer : MonoBehaviour
         }
 
         DisplayTime();
+        TimeOutAudio();
     }
 
     private void DisplayTime()
@@ -82,6 +85,19 @@ public class Timer : MonoBehaviour
     {
         scoreboardTable.AddHighscoreEntry(scoreTracker.score, scoreTracker.userName);
         scoreBoard.SetActive(true);
+        AudioManager.Instance.PlaySFX("GameOver(Test)");
     }
 
+    private void TimeOutAudio()
+    {
+        if(timeout == false)
+        {
+            if (hasLimit && ((countDown && actualSeconds <= limit + 11) || (!countDown && actualSeconds >= limit - 11)))
+            {
+                timeout = true;
+                AudioManager.Instance.PlaySFX("Countdown(Test)");
+
+            }
+        }
+    }
 }

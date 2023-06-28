@@ -20,6 +20,7 @@ public class ItemCheck : MonoBehaviour
         {
             scoreTracker.AddScore(scorePoints);
             Debug.Log("Valid Item. Score:" + scoreTracker.score.ToString());
+            AudioManager.Instance.PlaySFX("Enter(Test)");
         }
         else
         {
@@ -36,6 +37,7 @@ public class ItemCheck : MonoBehaviour
         {
             scoreTracker.RemoveScore(scorePoints);
             Debug.Log("Item Removed. Score:" + scoreTracker.score.ToString());
+            AudioManager.Instance.PlaySFX("Exit(Test)");
         }
     }
 
