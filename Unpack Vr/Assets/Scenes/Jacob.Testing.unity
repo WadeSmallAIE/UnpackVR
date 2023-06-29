@@ -733,6 +733,7 @@ MonoBehaviour:
   scoreBoard: {fileID: 1197070084}
   scoreboardTable: {fileID: 1545604224}
   actualSeconds: 0
+  timeout: 0
 --- !u!1 &285573984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1139,7 @@ GameObject:
   - component: {fileID: 642190926}
   - component: {fileID: 642190927}
   m_Layer: 0
-  m_Name: Slider (1)
+  m_Name: SFX Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1214,10 +1215,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.75
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 657632104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SFXVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &645792106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1347,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f16b273a1b4f52f429ab84cc70559fef, type: 3}
   musicSource: {fileID: 870015837}
   sfxSource: {fileID: 2081642239}
+  musicSlider: {fileID: 1963945791}
+  sfxSlider: {fileID: 642190927}
 --- !u!4 &657632105
 Transform:
   m_ObjectHideFlags: 0
@@ -2793,7 +2808,7 @@ GameObject:
   - component: {fileID: 1963945790}
   - component: {fileID: 1963945791}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: Music Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2869,10 +2884,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.25
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 657632104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: MusicVolume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1974884831
 GameObject:
   m_ObjectHideFlags: 0

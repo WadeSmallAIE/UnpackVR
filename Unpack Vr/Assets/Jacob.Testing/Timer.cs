@@ -86,6 +86,7 @@ public class Timer : MonoBehaviour
         scoreboardTable.AddHighscoreEntry(scoreTracker.score, scoreTracker.userName);
         scoreBoard.SetActive(true);
         AudioManager.Instance.PlaySFX("GameOver(Test)");
+        AudioManager.Instance.musicSource.Stop();
     }
 
     private void TimeOutAudio()
