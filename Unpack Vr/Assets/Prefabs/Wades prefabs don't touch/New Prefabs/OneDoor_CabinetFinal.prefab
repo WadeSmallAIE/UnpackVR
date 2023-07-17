@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6631382155122899792}
   - component: {fileID: 1732706829103611546}
   - component: {fileID: 5269655911109991699}
-  - component: {fileID: 163055335001027848}
   - component: {fileID: 5068934015823225049}
+  - component: {fileID: 163055335001027848}
   m_Layer: 0
   m_Name: Door_C1D
   m_TagString: Untagged
@@ -30,12 +30,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160479424882500183}
   m_LocalRotation: {x: -0, y: -0.0071603945, z: -0, w: 0.99997437}
-  m_LocalPosition: {x: 0.39916277, y: 0.012821382, z: 0.35800415}
+  m_LocalPosition: {x: 0.40324932, y: 0.012821382, z: 0.34799203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7588210803027497362}
-  m_RootOrder: 0
+  m_Father: {fileID: 5396177859015147459}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4358398342863518765
 MeshFilter:
@@ -139,19 +139,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &163055335001027848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160479424882500183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e87623ea16947864791e228f56320078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ditance: 1.2
 --- !u!114 &5068934015823225049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +255,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &163055335001027848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160479424882500183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87623ea16947864791e228f56320078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ditance: 1.2
 --- !u!1 &1909477873757641371
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +478,7 @@ Transform:
   m_Children:
   - {fileID: 6681714349884092280}
   - {fileID: 1370301415632169205}
+  - {fileID: 5500583640069826228}
   - {fileID: 7588210803027497362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -512,10 +513,9 @@ Transform:
   m_LocalPosition: {x: 0.004086442, y: 0, z: -0.010012105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5500583640069826228}
+  m_Children: []
   m_Father: {fileID: 5396177859015147459}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5345612653031983195
 MeshFilter:
