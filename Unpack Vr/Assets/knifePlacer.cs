@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class knifePlacer : MonoBehaviour
 {
     public Transform[] pos;
     public GameObject[] objects;
-
+    XRGrabInteractable interactable;
 
     private void Start()
     {
-
+        //interactable = GetComponent<XRGrabInteractable>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -40,7 +41,7 @@ public class knifePlacer : MonoBehaviour
                         collision.transform.rotation = pos[i].rotation;
                         collision.GetComponent<Rigidbody>().isKinematic = true;
                         collision.GetComponent<Rigidbody>().useGravity = false;
-
+                        collision.GetComponent<XRGrabInteractable>().enabled = false;
                         break;
                     }
 
@@ -48,20 +49,5 @@ public class knifePlacer : MonoBehaviour
             }
 
         }
-    }
-    private void OnTriggerExit(Collider collision)
-    {
-        bool canTake = false;
-
-        for (int i = 0; i < objects.Length; i++)
-        {
-            if (objects[i].gameObject == collision.gameObject)
-            {
-                canTake = true;
-            }
-        }
-
-        collision.GetComponent<Rigidbody>().isKinematic = false;
-        collision.GetComponent<Rigidbody>().useGravity = true;
     }
 }

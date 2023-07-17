@@ -1,0 +1,11 @@
+https://www.figma.com/file/AHn0mN9IedyKKaWpwPucKx/Game-Recommendation-App_Prototype?type=design&node-id=0%3A1&mode=design&t=jdQLMeh7NHjM6a68-1
+
+(Click the present button next to the zoom button in the top right corner to access the test prototype)
+
+1. Enter and leave the settings menu.
+
+2. Access the platforms screen through the drop down menu.
+
+3. Go back to the genres screen from the platforms screen.
+
+4. Try to view the content hidden by the screen view.
