@@ -18,8 +18,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private float limit;
     [Header("Score")]
     [SerializeField] private ScoreTracker scoreTracker;
-    [SerializeField] private GameObject scoreBoard;
-    [SerializeField] private ScoreboardTable scoreboardTable;
+    //[SerializeField] private GameObject scoreBoard;
+    //[SerializeField] private ScoreboardTable scoreboardTable;
     [Header("Debug")]
     [SerializeField] private float actualSeconds;
     [SerializeField] private bool timeout = false;
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
    void Start()
     {
         actualSeconds = seconds + (minutes * 60);
-        scoreBoard.SetActive(false);
+        //scoreBoard.SetActive(false);
         timeout = false;
     }
 
@@ -83,8 +83,8 @@ public class Timer : MonoBehaviour
 
     private void GameOver()
     {
-        scoreboardTable.AddHighscoreEntry(scoreTracker.score, scoreTracker.userName);
-        scoreBoard.SetActive(true);
+        //scoreboardTable.AddHighscoreEntry(scoreTracker.score, scoreTracker.userName);
+        //scoreBoard.SetActive(true);
         AudioManager.Instance.PlaySFX("GameOver(Test)");
         AudioManager.Instance.musicSource.Stop();
     }

@@ -30,6 +30,7 @@ public class ScoreboardTable : MonoBehaviour
 
         //AddHighscoreEntry(100, "Test");
 
+
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
