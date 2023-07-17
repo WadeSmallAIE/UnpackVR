@@ -6,7 +6,7 @@ public class instantiateObjects : MonoBehaviour
 {
 
     public Transform pos;
-    public GameObject[] instantiateObject;
+    public Rigidbody[] prefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,15 +23,20 @@ public class instantiateObjects : MonoBehaviour
 
     private void CreateObjects()
     {
-        int n = Random.Range(0, instantiateObject.Length);
-        GameObject g = Instantiate(instantiateObject[n], pos.position, transform.rotation);
+        int n = Random.Range(0, prefab.Length);
+        Rigidbody p = Instantiate(prefab[n], pos.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "GameController")
+
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "GameController")
         {
-            CreateObjects();
+            //CreateObjects();
+            Debug.Log("hit");
         }
     }
 }

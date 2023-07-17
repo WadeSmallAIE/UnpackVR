@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 8196726492440531342}
   - component: {fileID: 8196726492440531331}
   - component: {fileID: 8196726492440531343}
+  - component: {fileID: 169987512}
   m_Layer: 0
   m_Name: Right_Flap
   m_TagString: Untagged
@@ -654,7 +655,7 @@ HingeJoint:
   m_UseMotor: 0
   m_Motor:
     targetVelocity: 0
-    force: 0
+    force: 10
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
@@ -786,6 +787,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &169987512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390524796861920010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87623ea16947864791e228f56320078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ditance: 1.5
 --- !u!1 &6056487211754287691
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +812,11 @@ GameObject:
   - component: {fileID: 3860579969175920234}
   - component: {fileID: 7940101722376988944}
   - component: {fileID: 1062814535}
+<<<<<<< HEAD
   - component: {fileID: 4987336967358329441}
+=======
+  - component: {fileID: 1062814536}
+>>>>>>> testbranch
   m_Layer: 0
   m_Name: Bocks
   m_TagString: Untagged
@@ -888,7 +906,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!64 &4987336967358329441
+=======
+--- !u!64 &1062814536
+>>>>>>> testbranch
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -917,6 +939,7 @@ GameObject:
   - component: {fileID: 8196726493153696007}
   - component: {fileID: 8196726493153696027}
   - component: {fileID: 8196726493153696006}
+  - component: {fileID: 27120115}
   m_Layer: 0
   m_Name: Left_Flap
   m_TagString: Untagged
@@ -1041,12 +1064,17 @@ HingeJoint:
   m_UseMotor: 0
   m_Motor:
     targetVelocity: 0
-    force: 0
+    force: 10
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
+<<<<<<< HEAD
     min: -46.585587
     max: 180
+=======
+    min: -7.1747284
+    max: 181.07756
+>>>>>>> testbranch
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1173,6 +1201,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &27120115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523948703982192452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87623ea16947864791e228f56320078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ditance: 1.5
 --- !u!1 &8196726493392703950
 GameObject:
   m_ObjectHideFlags: 0
