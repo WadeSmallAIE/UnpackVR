@@ -116,7 +116,7 @@ public class PlayerControl : MonoBehaviour
 
     // This is unrelated to movement player movement, allows the player to pick up grabbable objects in the world.
     // Future update is to merge this into the interactable system but I'm still not sure its the right call to make.
-    private void DoGrab(InputAction.CallbackContext obj)
+    public void DoGrab(InputAction.CallbackContext obj)
     {
         //GameObject object1;
         //RaycastHit ObjectHit;
