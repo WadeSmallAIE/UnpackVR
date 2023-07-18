@@ -9,6 +9,7 @@ public class RePack : MonoBehaviour
     public void RePackButton()
     {
         Debug.Log("Button Pressed - RePack");
+        AudioManager.Instance.PlaySFX("ResetButtonAudio");
         SceneManager.LoadScene(1);
 
     }
@@ -16,6 +17,7 @@ public class RePack : MonoBehaviour
     public void ExitButton()
     {
         Debug.Log("Game Closed");
+        AudioManager.Instance.PlaySFX("ExitButtonAudio");
         Application.Quit();
     }
 

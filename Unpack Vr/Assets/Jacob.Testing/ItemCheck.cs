@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemCheck : MonoBehaviour
 {
     [SerializeField] private string checkItemName;
-    [SerializeField] private GameObject taskCompleteMarker;
+    //[SerializeField] private GameObject taskCompleteMarker;
     private string itemName;
     private int scorePoints;
 
@@ -22,7 +22,7 @@ public class ItemCheck : MonoBehaviour
             scoreTracker.AddScore(scorePoints);
             Debug.Log("Valid Item. Score:" + scoreTracker.score.ToString());
             AudioManager.Instance.PlaySFX("Enter(Test)");
-            taskCompleteMarker.SetActive(true);
+            //taskCompleteMarker.SetActive(true);
         }
         else
         {
@@ -40,7 +40,7 @@ public class ItemCheck : MonoBehaviour
             scoreTracker.RemoveScore(scorePoints);
             Debug.Log("Item Removed. Score:" + scoreTracker.score.ToString());
             AudioManager.Instance.PlaySFX("Exit(Test)");
-            taskCompleteMarker.SetActive(false);
+            //taskCompleteMarker.SetActive(false);
         }
     }
 

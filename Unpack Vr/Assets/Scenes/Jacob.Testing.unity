@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkItemName: Melon
-  taskCompleteMarker: {fileID: 1496640671}
   scoreTracker: {fileID: 523290089}
 --- !u!1 &41735643
 GameObject:
@@ -425,7 +424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkItemName: Berry
-  taskCompleteMarker: {fileID: 1407444259}
   scoreTracker: {fileID: 523290089}
 --- !u!4 &285573989
 Transform:
@@ -691,17 +689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &657632104 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8550374964404106093, guid: 3b587ea4d7f43954b8a548c49a74e5a5, type: 3}
-  m_PrefabInstance: {fileID: 8550374963947870213}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa728ccdb933a04e99f10cd97b55ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1171226883
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,11 +855,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1407444259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2817397636552826621, guid: 047f0e59e3b316446a4b19d0856d4d8d, type: 3}
-  m_PrefabInstance: {fileID: 2817397637901351902}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439798389
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,11 +886,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1496640671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2817397636709390145, guid: 047f0e59e3b316446a4b19d0856d4d8d, type: 3}
-  m_PrefabInstance: {fileID: 2817397637901351902}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1590166551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1376,7 @@ PrefabInstance:
     - target: {fileID: 3706945209349965106, guid: 53843724ea1c0a54fb05f39825ff435a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 657632104}
+      objectReference: {fileID: 0}
     - target: {fileID: 3706945209907663513, guid: 53843724ea1c0a54fb05f39825ff435a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1411,10 +1388,10 @@ PrefabInstance:
     - target: {fileID: 3706945210176791618, guid: 53843724ea1c0a54fb05f39825ff435a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 657632104}
+      objectReference: {fileID: 0}
     - target: {fileID: 6361005191076430811, guid: 53843724ea1c0a54fb05f39825ff435a, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6361005191076430811, guid: 53843724ea1c0a54fb05f39825ff435a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1644,6 +1621,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 946416584442061254, guid: 3b587ea4d7f43954b8a548c49a74e5a5, type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 642190927}
+    - target: {fileID: 946416584442061254, guid: 3b587ea4d7f43954b8a548c49a74e5a5, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 1963945791}
+    - target: {fileID: 946416584442061255, guid: 3b587ea4d7f43954b8a548c49a74e5a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8550374964404106082, guid: 3b587ea4d7f43954b8a548c49a74e5a5, type: 3}
       propertyPath: m_Name
       value: AudioManager
