@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2729515650642426659}
   - component: {fileID: 1319250746912683142}
   - component: {fileID: 3866934950019645516}
+  - component: {fileID: 7093865430818071166}
   m_Layer: 0
   m_Name: Metal Shelf
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7093865430818071166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362747089713455513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3561193674498603776, guid: 29e5b15b286be3349b441a6e18d4150f, type: 3}

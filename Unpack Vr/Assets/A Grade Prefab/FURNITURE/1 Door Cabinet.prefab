@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 7565042144616469926}
   - component: {fileID: 5448720409443372143}
   - component: {fileID: 5891521919688132129}
+  - component: {fileID: 6262703783040360472}
   m_Layer: 0
   m_Name: One_Door_Counter
   m_TagString: Untagged
@@ -426,6 +427,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6262703783040360472
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146508738597644797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7319532862692085820, guid: 51ebe81ba2df5084b9ea83cd0795447a, type: 3}
 --- !u!1 &9137147991146554903
 GameObject:
   m_ObjectHideFlags: 0

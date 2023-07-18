@@ -1542,6 +1542,7 @@ GameObject:
   - component: {fileID: 5873549906070670809}
   - component: {fileID: 7024040846538677793}
   - component: {fileID: 5259229251096331187}
+  - component: {fileID: 8685051074970465354}
   m_Layer: 0
   m_Name: Oven
   m_TagString: Untagged
@@ -1630,3 +1631,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &8685051074970465354
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997505664267036909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3205702657871549766, guid: d13bdd2f9124efc4e99ca6b77c5231d2, type: 3}

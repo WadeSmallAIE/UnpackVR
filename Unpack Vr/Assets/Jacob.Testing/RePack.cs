@@ -10,7 +10,7 @@ public class RePack : MonoBehaviour
     {
         Debug.Log("Button Pressed - RePack");
         AudioManager.Instance.PlaySFX("ResetButtonAudio");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
 
     }
 

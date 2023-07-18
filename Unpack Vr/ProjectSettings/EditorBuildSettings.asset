@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: caab9f8315aa7494892b4b9521050b1c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jacob.Testing.unity
     guid: cc56b63179063dc4da9a14969441c882
+  - enabled: 1
+    path: Assets/Scenes/Wades fusion scene.unity
+    guid: f6c231b1d4b91c84fa4e36dfd19b5181
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7b8ea492e85ef0446b1c8b9920ee0b93, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c97d932c38e3b2f429dc9402d58cb5ac, type: 2}
