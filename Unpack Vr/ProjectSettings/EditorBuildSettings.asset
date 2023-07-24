@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Wades fusion scene.unity
     guid: f6c231b1d4b91c84fa4e36dfd19b5181
+  - enabled: 0
+    path: Assets/Scenes/Wades fusion scene 1.unity
+    guid: 4b27d990cc980174b83f86738378b0ab
+  - enabled: 0
+    path: Assets/Scenes/Wades fusion scene 2.unity
+    guid: d6ef4e4d9f2911e4c9382036fbd96556
+  - enabled: 1
+    path: Assets/Scenes/Wades fusion scene 3.unity
+    guid: 414f2f53f7dadb0469d5d9d47a17efcd
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7b8ea492e85ef0446b1c8b9920ee0b93, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c97d932c38e3b2f429dc9402d58cb5ac, type: 2}
